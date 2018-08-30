@@ -5,4 +5,5 @@ public class Myjni {
         System.loadLibrary("xx.so");
     }
     public native static String get();
+
 }
