@@ -1,0 +1,34 @@
+# A3
+type A3, domain, mlstrustedsubject;
+type A3_exec, exec_type, file_type;
+
+init_daemon_domain(A3)
+
+allow A3 self:capability dac_override;
+
+# Read OTA zip file from /data/data/com.google.android.gsf/app_download
+r_dir_file(A3, app_data_file)
+
+userdebug_or_eng(`
+  # For debugging, allow /data/local/tmp access
+  r_dir_file(A3, shell_data_file)
+')
+
+# Read /cache/recovery/command
+# Read /cache/recovery/A3_file
+# Write to pipe file /cache/recovery/A3_status
+allow A3 cache_file:dir rw_dir_perms;
+allow A3 cache_file:file create_file_perms;
+allow A3 cache_file:fifo_file w_file_perms;
+
+# Set a property to reboot the device.
+set_prop(A3, powerctl_prop)
+
+# Raw writes to block device
+allow A3 self:capability sys_rawio;
+allow A3 block_device:blk_file w_file_perms;
+allow A3 block_device:dir r_dir_perms;
+
+# Access userdata block device.
+allow A3 userdata_block_device:blk_file w_file_perms;
+
