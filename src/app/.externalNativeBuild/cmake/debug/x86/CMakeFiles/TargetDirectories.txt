@@ -1,0 +1,3 @@
+F:/TCLSoftwareEducation/Project/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/native-lib.dir
+F:/TCLSoftwareEducation/Project/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/edit_cache.dir
+F:/TCLSoftwareEducation/Project/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/rebuild_cache.dir
