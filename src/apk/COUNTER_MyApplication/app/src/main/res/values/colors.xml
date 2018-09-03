@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="border">#B5B0A3</color>
+    <color name="number_bg">#CCCCCC</color>
+    <color name="p_number_bg">#BDBDBD</color>
+    <color name="sign_bg">#C3D4CB</color>
+    <color name="p_sign_bg">#A7B5AD</color>
+    <color name="equal_bg">#2776FF</color>
+    <color name="p_equal_bg">#2268E0</color>
+</resources>
